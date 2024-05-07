@@ -1,0 +1,18 @@
+@import "../../../assets/scss/variables.scss";
+
+.home-layout-container {
+  padding: 1rem 3rem;
+}
+
+.layout-content-area {
+  background-color: $ghost-white;
+  border-radius: 0.5rem;
+  padding: 2rem 4rem;
+  height: calc(100vh - 181px);
+}
+
+@media (max-width: 850px) {
+  .home-layout-container {
+    padding: 1rem 1rem;
+  }
+}

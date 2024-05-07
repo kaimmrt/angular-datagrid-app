@@ -1,0 +1,28 @@
+<div class="navbar-area" [ngClass]="{ responsive: isResponsive }">
+  <a class="navbar-logo-container" [routerLink]="'/'">
+    <img class="navbar-logo" src="../../../assets/logo.svg" alt="logo" />
+  </a>
+
+  <div class="navbar-links-container" [ngClass]="{ responsive: isResponsive }">
+    <a class="navbar-link-item" [routerLink]="'/'">Hakkımızda</a>
+    <a class="navbar-link-item" [routerLink]="'/'">Jüri - Yarışma Yazılımı</a>
+    <a class="navbar-link-item" [routerLink]="'/'">Word Ninja</a>
+    <a class="navbar-link-item" [routerLink]="'/'">Word Pyramids</a>
+  </div>
+
+  <div class="navbar-social-media-container">
+    @for (socialMediaLink of socialMediaLinks; track $index) {
+    <a class="navbar-link-item" [href]="socialMediaLink.link" target="_blank">
+      <img [src]="socialMediaLink.img" [alt]="socialMediaLink.alt" />
+    </a>
+    }
+  </div>
+
+  <div
+    class="nav-toggle"
+    [ngClass]="{ responsive: isResponsive }"
+    (click)="toggleNavbar()"
+  >
+    <div class="bar"></div>
+  </div>
+</div>
