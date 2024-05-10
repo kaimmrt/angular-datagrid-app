@@ -1,3 +1,24 @@
 <app-home-layout>
-asd
+  <dx-data-grid
+    [dataSource]="data"
+    keyExpr="id"
+    [showBorders]="true"
+    [rowAlternationEnabled]="true"
+    height="100%"
+  >
+    <dxo-scrolling rowRenderingMode="virtual"> </dxo-scrolling>
+    <dxo-paging [pageSize]="10"></dxo-paging>
+    <dxo-pager
+      [visible]="true"
+      displayMode="compact"
+      [allowedPageSizes]="allowedPageSizes"
+      [showPageSizeSelector]="true"
+      [showNavigationButtons]="true"
+    >
+    </dxo-pager>
+    <dxi-column dataField="socialMediaLink"></dxi-column>
+    <dxi-column dataField="socialMediaName"></dxi-column>
+    <dxi-column dataField="description"></dxi-column>
+    ></dx-data-grid
+  >
 </app-home-layout>
