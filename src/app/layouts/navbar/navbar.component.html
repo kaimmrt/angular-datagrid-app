@@ -4,10 +4,11 @@
   </a>
 
   <div class="navbar-links-container" [ngClass]="{ responsive: isResponsive }">
-    <a class="navbar-link-item" [routerLink]="'/'">Hakkımızda</a>
-    <a class="navbar-link-item" [routerLink]="'/'">Jüri - Yarışma Yazılımı</a>
-    <a class="navbar-link-item" [routerLink]="'/'">Word Ninja</a>
-    <a class="navbar-link-item" [routerLink]="'/'">Word Pyramids</a>
+    @for (navbarLink of navbarLinks; track $index) {
+    <a class="navbar-link-item" [routerLink]="navbarLink.link">{{
+      navbarLink.title
+    }}</a>
+    }
   </div>
 
   <div class="navbar-social-media-container">

@@ -41,26 +41,5 @@ export class HomeComponent {
       description:
         'Software Development Agency Rast Mobile Information Technology Ltd.',
     },
-    {
-      id: uuidv4(),
-      socialMediaLink: 'twitter.com/rastmobile',
-      socialMediaName: 'twitter',
-      description:
-        'Software Development Agency Rast Mobile Information Technology Ltd.',
-    },
-    {
-      id: uuidv4(),
-      socialMediaLink: 'twitter.com/rastmobile',
-      socialMediaName: 'twitter',
-      description:
-        'Software Development Agency Rast Mobile Information Technology Ltd.',
-    },
-    {
-      id: uuidv4(),
-      socialMediaLink: 'twitter.com/rastmobile',
-      socialMediaName: 'twitter',
-      description:
-        'Software Development Agency Rast Mobile Information Technology Ltd.',
-    },
   ];
 }

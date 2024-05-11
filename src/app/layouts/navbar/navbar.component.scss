@@ -37,7 +37,7 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: $large-breakpoint) {
   .navbar-area {
     padding: 1rem 1rem;
     .navbar-links-container {
@@ -115,6 +115,16 @@
       .bar::after {
         transform: rotate(-45deg) translate(26px, 26px);
       }
+    }
+  }
+}
+
+@media (max-width: $extra-large-breakpoint) {
+  .navbar-area {
+    padding: 1rem;
+
+    .navbar-links-container {
+      gap: 2rem;
     }
   }
 }

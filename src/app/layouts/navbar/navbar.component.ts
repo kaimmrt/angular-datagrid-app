@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ISocialMediaLink } from '../../models/navbar/social-media-link.interface';
+import { INavbarLinks, ISocialMediaLink } from '../../models/navbar';
 
 @Component({
   standalone: true,
@@ -12,6 +12,25 @@ import { ISocialMediaLink } from '../../models/navbar/social-media-link.interfac
 })
 export class NavbarComponent {
   public isResponsive: boolean = false;
+
+  public navbarLinks: INavbarLinks[] = [
+    {
+      title: 'Hakkımızda',
+      link: '/',
+    },
+    {
+      title: 'Jüri - Yarışma Yazılımı',
+      link: '/',
+    },
+    {
+      title: 'Word Ninja',
+      link: '/',
+    },
+    {
+      title: 'Word Pyramids',
+      link: '/',
+    },
+  ];
 
   public socialMediaLinks: ISocialMediaLink[] = [
     {

@@ -11,8 +11,12 @@
   height: calc(100vh - 181px);
 }
 
-@media (max-width: 850px) {
+@media (max-width: $large-breakpoint) {
   .home-layout-container {
-    padding: 1rem 1rem;
+    padding: 1rem;
+  }
+
+  .layout-content-area {
+    padding: 1rem;
   }
 }

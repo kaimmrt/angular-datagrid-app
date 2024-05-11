@@ -1,24 +1,39 @@
 <app-home-layout>
-  <dx-data-grid
-    [dataSource]="data"
-    keyExpr="id"
-    [showBorders]="true"
-    [rowAlternationEnabled]="true"
-    height="100%"
-  >
-    <dxo-scrolling rowRenderingMode="virtual"> </dxo-scrolling>
-    <dxo-paging [pageSize]="10"></dxo-paging>
-    <dxo-pager
-      [visible]="true"
-      displayMode="compact"
-      [allowedPageSizes]="allowedPageSizes"
-      [showPageSizeSelector]="true"
-      [showNavigationButtons]="true"
+  <div class="home-top-bar-container">
+    <div class="filter-container">
+      <div class="search-input-container">
+        <input class="search-input" placeholder="Search objects..." />
+        <div class="search-input-suffix">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <div class="filter-button"><i class="fa-solid fa-filter"></i></div>
+    </div>
+    <button class="add-new-account-button">
+      <i class="fa-solid fa-plus"></i> Yeni Hesap Ekle
+    </button>
+  </div>
+  <div class="home-data-table-container">
+    <dx-data-grid
+      [dataSource]="data"
+      keyExpr="id"
+      [showBorders]="true"
+      [rowAlternationEnabled]="true"
+      height="100%"
     >
-    </dxo-pager>
-    <dxi-column dataField="socialMediaLink"></dxi-column>
-    <dxi-column dataField="socialMediaName"></dxi-column>
-    <dxi-column dataField="description"></dxi-column>
-    ></dx-data-grid
-  >
+      <dxo-scrolling rowRenderingMode="virtual"> </dxo-scrolling>
+      <dxo-paging [pageSize]="10"></dxo-paging>
+      <dxo-pager
+        [visible]="true"
+        displayMode="compact"
+        [allowedPageSizes]="allowedPageSizes"
+        [showPageSizeSelector]="true"
+        [showNavigationButtons]="true"
+      >
+      </dxo-pager>
+      <dxi-column dataField="socialMediaLink"></dxi-column>
+      <dxi-column dataField="socialMediaName"></dxi-column>
+      <dxi-column dataField="description"></dxi-column>
+    </dx-data-grid>
+  </div>
 </app-home-layout>
