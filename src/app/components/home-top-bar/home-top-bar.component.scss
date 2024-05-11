@@ -1,0 +1,95 @@
+@import "../../../assets/scss/variables.scss";
+
+.home-top-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+
+  .filter-container {
+    display: flex;
+    gap: 0.5rem;
+
+    .search-input-container {
+      display: flex;
+      width: 23.75rem;
+
+      .search-input {
+        border: none;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        padding: 0.65rem 1rem;
+        width: 100%;
+        &:focus-visible {
+          outline: none;
+        }
+      }
+
+      .search-input-suffix {
+        background-color: $primary-color;
+        color: $white;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        padding: 0.65rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .filter-button {
+      color: $primary-color;
+      background-color: $white;
+      border-radius: 50%;
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .add-new-account-button {
+    color: $white;
+    background-color: $primary-color;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.65rem 1rem;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+@media (max-width: $medium-breakpoint) {
+  .home-top-bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .filter-container {
+      width: 100%;
+      .search-input-container {
+        width: 100%;
+
+        .search-input {
+          width: 100%;
+        }
+      }
+    }
+
+    .add-new-account-button {
+      width: 100%;
+    }
+  }
+}

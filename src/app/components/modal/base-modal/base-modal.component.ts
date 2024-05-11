@@ -31,7 +31,6 @@ export class BaseModalComponent implements OnInit {
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe({
         next: (value: DynamicModalItem) => {
-          console.log('value', value);
           this.dynamicTemplate = value;
           this.loadComponent();
         },

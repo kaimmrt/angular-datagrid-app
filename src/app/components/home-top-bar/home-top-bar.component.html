@@ -1,0 +1,19 @@
+<div class="home-top-bar-container">
+  <div class="filter-container">
+    <div class="search-input-container">
+      <input
+        class="search-input"
+        [(ngModel)]="searchInputValue"
+        (ngModelChange)="onChangeSearchInputValuue($event)"
+        placeholder="Search objects..."
+      />
+      <div class="search-input-suffix">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <div class="filter-button"><i class="fa-solid fa-filter"></i></div>
+  </div>
+  <button class="add-new-account-button" (click)="openAddAccountModal()">
+    <i class="fa-solid fa-plus"></i> Yeni Hesap Ekle
+  </button>
+</div>

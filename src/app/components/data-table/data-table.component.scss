@@ -1,0 +1,57 @@
+@import "../../../assets/scss/variables.scss";
+
+::ng-deep .dx-datagrid-content .dx-datagrid-table .dx-row > td,
+.dx-datagrid-content .dx-datagrid-table .dx-row > tr > td {
+  vertical-align: middle;
+  height: 65px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left !important;
+  padding-left: 2rem;
+  color: $black;
+}
+
+::ng-deep .dx-datagrid-headers .dx-datagrid-table .dx-row > td {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19.5px;
+  text-align: left;
+  padding-left: 2rem;
+  color: $black;
+}
+
+::ng-deep .dx-datagrid-rowsview .dx-row {
+  &:hover {
+    box-shadow: 0px 1px 15px 0px #0000001c;
+  }
+}
+
+::ng-deep .dx-datagrid-pager {
+  border-top: 0;
+}
+
+::ng-deep .dx-datagrid-borders > .dx-datagrid-headers {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+::ng-deep .dx-datagrid-borders > .dx-datagrid-rowsview,
+.dx-datagrid-borders > .dx-datagrid-total-footer {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+::ng-deep .dx-datagrid .dx-column-indicators {
+  float: right !important;
+  color: $primary-color;
+}
+
+::ng-deep .dx-datagrid .dx-row-alt > td,
+.dx-datagrid .dx-row-alt > tr > td {
+  background-color: $ghost-white;
+}
+
+::ng-deep .dx-navigate-button {
+  color: $primary-color;
+}

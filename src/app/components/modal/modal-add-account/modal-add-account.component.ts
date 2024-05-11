@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { EmitterService } from '../../../services/emitter.service';
+import { AccountStore } from '../../../store/account-store.service';
 
 @Component({
   standalone: true,
@@ -11,6 +12,7 @@ import { EmitterService } from '../../../services/emitter.service';
 })
 export class ModalAddAccountComponent implements OnInit {
   private fb = inject(FormBuilder);
+  private accountStore = inject(AccountStore);
 
   public form!: FormGroup;
 
@@ -23,7 +25,7 @@ export class ModalAddAccountComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log(this.form.value);
+    this.accountStore.addAccount([this.form.value]);
     this.closeModal();
   }
 
