@@ -7,5 +7,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `npm install` to install npm packages
 
 ## Run the project
-Run `npm run` start to run the project
+Run `npm run start` to run the project
 
