@@ -1,0 +1,12 @@
+This app an account list manager app. Users can add accounts, list the added accounts, and filter them.
+
+First, I created an Angular project. Then, I created a layout. Afterward,
+I implemented the DevExpress data-grid table into the project and converted this table into the UI in the design.
+
+Next, I finished the UI part of the filtering area and the button for adding a new account.
+
+Then, I started working on the modal. First, I created a baseModal. Using this baseModal,
+I built a structure that allows me to create different modals as I wish. Afterward, I created the modal in the design.
+
+Then, it was time to deal with the data.
+I set up a store mechanism using Signal. I was able to deliver the data to all components through a single file.
