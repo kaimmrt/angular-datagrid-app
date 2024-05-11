@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { HomeLayoutComponent } from '../../layouts/home-layout/home-layout.component';
 import { DxDataGridModule } from 'devextreme-angular';
 import { v4 as uuidv4 } from 'uuid';
+import { DynamicModalItem } from '../../models/modal/dynamic-modal-item';
+import { ModalAddAccountComponent } from '../../components/modal/modal-add-account/modal-add-account.component';
+import { EmitterService } from '../../services/emitter.service';
 
 @Component({
   standalone: true,
@@ -42,4 +45,9 @@ export class HomeComponent {
         'Software Development Agency Rast Mobile Information Technology Ltd.',
     },
   ];
+
+  public openAddAccountModal() {
+    const value = new DynamicModalItem(ModalAddAccountComponent);
+    EmitterService.get('openModal').emit(value);
+  }
 }

@@ -1,0 +1,18 @@
+<form [formGroup]="form" class="form-container" (submit)="onSubmit()">
+  <div class="input-container">
+    <label for="social-media-link">Sosyal Medya Link</label>
+    <input id="social-media-link" formControlName="socialMediaLink" />
+  </div>
+  <div class="input-container">
+    <label for="social-media-name">Sosyal Medya Adı</label>
+    <input id="social-media-name" formControlName="socialMediaName" />
+  </div>
+  <div class="input-container">
+    <label for="description">Açıklama</label>
+    <input id="description" formControlName="description" />
+  </div>
+  <div class="button-container">
+    <button class="close-button" (click)="closeModal()">Vazgeç</button>
+    <button class="save-button" type="submit">Kaydet</button>
+  </div>
+</form>

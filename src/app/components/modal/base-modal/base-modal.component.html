@@ -1,0 +1,12 @@
+<div class="modal-container" [ngClass]="status">
+  <div class="modal-overlay" (click)="closeModal()">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <span class="close-button" (click)="closeModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
+      <div class="modal-template-container">
+        <ng-template appModalTemplate></ng-template>
+      </div>
+    </div>
+  </div>
+</div>

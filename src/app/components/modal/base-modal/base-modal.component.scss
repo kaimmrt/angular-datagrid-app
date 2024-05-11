@@ -1,0 +1,74 @@
+.modal-container {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: initial;
+  z-index: -10;
+  overflow: hidden;
+  -webkit-transition: rgba(0, 0, 0, 0) 0.75s,
+    -10 0.1s 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  /* wait for opacity and than z-index -10 */
+  transition: rgba(0, 0, 0, 0) 0.75s,
+    -10 0.1s 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.modal-container.open .modal-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 400;
+}
+
+.modal-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  min-width: 30rem;
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.modal-container.open .modal-box {
+  opacity: 1;
+  -webkit-transition: 1 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 1 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.close-button {
+  position: absolute;
+  right: 1.2rem;
+  top: 1rem;
+  cursor: pointer;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.modal-template-container {
+  width: 100%;
+}
+
+@media (min-width: 43.75em) {
+  .modal-container {
+    text-align: right;
+  }
+}

@@ -9,7 +9,7 @@
       </div>
       <div class="filter-button"><i class="fa-solid fa-filter"></i></div>
     </div>
-    <button class="add-new-account-button">
+    <button class="add-new-account-button" (click)="openAddAccountModal()">
       <i class="fa-solid fa-plus"></i> Yeni Hesap Ekle
     </button>
   </div>
@@ -37,3 +37,7 @@
     </dx-data-grid>
   </div>
 </app-home-layout>
+
+<ng-template #modalTemplate>
+  <div>This is our custom modal content</div>
+</ng-template>
